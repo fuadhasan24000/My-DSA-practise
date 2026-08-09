@@ -193,14 +193,25 @@
 
 # Fabonacci number
 
-n = 6
-a =0
-b=1
-for i in range(int(n/2)):
-    b += a
-    a += b
+# n = 6
+# a =0
+# b=1
+# for i in range(int(n/2)):
+#     b += a
+#     a += b
 
-if n%2 == 0:
-    print(b)
-else:
-    print(a)
+# if n%2 == 0:
+#     print(b)
+# else:
+#     print(a)
+
+
+
+#using recursion
+
+def fab(n):
+    
+    if n == 0 or n == 1:
+        return n
+    return fab(n-1) + fab(n-2)    
+print(fab(5))
