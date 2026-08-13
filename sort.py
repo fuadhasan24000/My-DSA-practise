@@ -18,14 +18,38 @@
 
 # Bubble sort
 
-List = [4,7,2,44,23,6,9,18,56,37,12,85,49,14,66]
+# List = [4,7,2,44,23,6,9,18,56,37,12,85,49,14,66]
 
-def bub_sort(list):
-    n = len(list)
-    for i in range(n):
-        for j in range(n-i-1):
-            if list[j] > list[j+1]:
-                list[j],list[j+1] = list[j+1], list[j]
-    return list   
+# def bubble_sort(list):
+#     n = len(list)
+    
+#     for i in range(n):
+#         is_swap = False                    #best case optimization
+#         for j in range(n-i-1):
+#             if list[j] > list[j+1]:
+#                 list[j],list[j+1] = list[j+1], list[j]
+#                 is_swap = True 
+#         if is_swap == False:
+#             return list
+#     return list   
 
-print(bub_sort(List))
+# print(bubble_sort(List))
+
+
+
+
+# Inserton sort
+
+# List = [4,7,2,44,23,6,9,18,56,37,12,85,49,14,66]
+
+# def ins_sort(arr):
+#     n= len(arr)
+#     for i in range(1,n):
+#         key = arr[i]
+#         j= i-1
+#         while j>=0 and arr[j] > key:
+#             arr[j+1]= arr[j]
+#             j-=1
+#         arr[j+1]= key
+#     return arr
+# print(ins_sort(List))
