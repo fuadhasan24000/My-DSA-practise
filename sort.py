@@ -53,3 +53,37 @@
 #         arr[j+1]= key
 #     return arr
 # print(ins_sort(List))
+
+
+
+
+#  Merge sort
+
+List = [4,7,2,44,23,6,9,18,56,37,12,85,49,14,66]
+
+
+def merge_sort(arr):
+    if len(arr) <= 1:
+        return arr
+    
+    middle=len(arr)//2
+    left = merge_sort(arr[:middle])
+    right= merge_sort(arr[middle:])
+    i=0
+    j=0
+    result =[]
+    while i<len(left) and j<len(right):
+        
+        if left[i] <= right[j]:
+            result.append(left[i])
+            i+=1
+            
+        elif left[i] > right[j]:
+            result.append(right[j])
+            j+=1
+        
+    result.extend(left[i:])
+    result.extend(right[j:])
+    return result           
+
+print(merge_sort(List))
